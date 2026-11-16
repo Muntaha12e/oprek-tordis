@@ -1,0 +1,31 @@
+# KUMPULAN PROMPT KONSOL - TORDIS
+# Buat belajar DevTools, cuma ngubah tampilan di HP sendiri, bukan ngehack server
+
+# 1. Ngetes prompt
+prompt("halo, siapa nama lu?")
+
+# 2. Ngecek halaman
+document.title
+location.href
+document.body.innerText
+
+# 3. Ngubah judul (cuma di HP sendiri)
+document.title = "HAGO PUNYA TORDIS"
+
+# 4. Ngubah tulisan (cuma di HP sendiri)
+baru = "GAS MAIN BARENG ORDIS!"
+let jalan = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n; while(n = jalan.nextNode()){ if(n.nodeValue.includes('Temui aku')){ n.nodeValue = n.nodeValue.replace('Temui aku di Hago Sekarang!', baru) } }
+
+# 5. Ngecek lagi di APK apa di Chrome
+navigator.userAgent
+typeof window.HagoBridge
+Object.keys(localStorage)
+
+# 6. Ngintip klik
+monitorEvents(document, 'click')
+unmonitorEvents(document, 'click')
+
+# 7. Trick lain
+copy(document.body.innerText)
+$$('img').length
+$$('a').map(a => a.href)
